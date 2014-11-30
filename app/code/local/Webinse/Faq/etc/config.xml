@@ -1,0 +1,99 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * @category    Webinse
+ * @package     Webinse_Faq
+ * @author      Alena Tsareva <alena.tsareva@webinse.com>
+ */
+-->
+
+<config>
+    <!-- module configuration as active, depends, version -->
+    <modules>
+        <Webinse_Faq>
+            <version>0.4.0</version>
+        </Webinse_Faq>
+    </modules>
+
+    <!--
+        main configuration for models, resources, blocks, helpers, fieldsets,
+    template, events, eav_attributes, custom_variables. These configurations in this
+    part include basic configs for module, configs about folders containing file
+    class for model, block, helper or events (frontend and admin), configures for
+    email template.
+    -->
+    <global>
+        <models>
+            <faq>
+                <class>Webinse_Faq_Model</class>
+                <resourceModel>faq_resource</resourceModel>
+            </faq>
+            <faq_resource>
+                <class>Webinse_Faq_Model_Resource</class>
+                <entities>
+                    <faq>
+                        <table>webinse_faq2</table>
+                    </faq>
+                </entities>
+            </faq_resource>
+        </models>
+
+        <!--
+            @todo set resources for setup
+        -->
+        <resources>
+            <faq_setup>
+                <setup>
+                    <module>Webinse_Faq</module>
+                </setup>
+            </faq_setup>
+        </resources>
+        <blocks>
+            <faq>
+                <class>Webinse_Faq_Block</class>
+            </faq>
+        </blocks>
+        <helpers>
+            <faq>
+                <class>Webinse_Faq_Helper</class>
+            </faq>
+        </helpers>
+    </global>
+
+    <!--
+        including configure operation of module in admin. The cards in
+    this part often have layout, translate, events. These configures only have impact
+    on backend in Magento.
+    -->
+    <adminhtml>
+        <!--
+            @todo set layout (faq.xml) for backend
+        -->
+        <layout>
+            <updates>
+                <faq>
+                    <file>faq.xml</file>
+                </faq>
+            </updates>
+        </layout>
+    </adminhtml>
+
+    <!--
+        containing configures attributes, fieldsets, routers. In this config, we
+    often notice to configure for router of admin.fig.
+    -->
+    <admin>
+        <!--
+            @todo define a route for backend
+        -->
+        <routers>
+            <adminhtml>
+                <args>
+                    <modules>
+                        <faq before="Mage_Adminhtml">Webinse_Faq_Adminhtml</faq>
+                    </modules>
+                </args>
+            </adminhtml>
+        </routers>
+    </admin>
+</config>

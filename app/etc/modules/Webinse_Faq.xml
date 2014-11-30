@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * @category    Webinse
+ * @package     Webinse_Faq
+ * @author      Alena Tsareva <alena.tsareva@webinse.com>
+ */
+-->
+<config>
+    <modules>
+        <Webinse_Faq>
+            <active>true</active>           <!-- module is enabled or disabled (true/false) -->
+            <codePool>local</codePool>      <!-- here's explanation http://magestudyguide.com/includes/answers/1.html  -->
+        </Webinse_Faq>
+    </modules>
+</config>

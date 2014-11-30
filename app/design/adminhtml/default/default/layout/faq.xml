@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * @category    Webinse
+ * @package     Webinse_Faq
+ * @author      Alena Tsareva <alena.tsareva@webinse.com>
+ */
+-->
+
+<layout>
+    <adminhtml_faq_index>
+        <reference name="content">
+            <block type="faq/adminhtml_faq" name="faq"></block>
+        </reference>
+    </adminhtml_faq_index>
+
+    <adminhtml_faq_new>
+        <update handle="faq_adminhtml_faq_edit"/>
+    </adminhtml_faq_new>
+
+    <adminhtml_faq_edit>
+        <reference name="content">
+            <block type="faq/adminhtml_faq_edit" name="faq.edit" />
+        </reference>
+    </adminhtml_faq_edit>
+</layout>

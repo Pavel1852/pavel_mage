@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+/**
+ * @category    Webinse
+ * @package     Webinse_Faq
+ * @author      Alena Tsareva <alena.tsareva@webinse.com>
+ */
+-->
+
+<config>
+    <menu>
+        <webinse translate="title">
+            <title>Webinse</title>
+            <sort_order>10</sort_order>
+            <children>
+                <faq translate="title">
+                    <title>Manage Faq</title>
+                    <sort_order>0</sort_order>
+                    <action>adminhtml/faq</action>
+                </faq>
+            </children>
+        </webinse>
+        <!--
+            @todo set menu Webinse->Faq in backend, Position (order) of the menu never mind
+        -->
+    </menu>
+    <acl>
+        <resources>
+            <admin>
+                <children>
+                    <webinse translate="title">
+                        <title>Webinse</title>
+                        <sort_order>10</sort_order>
+                    </webinse>
+                    <children>
+                        <faq translate="title">
+                            <title>Manage Faq</title>
+                            <sort_order>0</sort_order>
+                        </faq>
+                    </children>
+                </children>
+            </admin>
+        </resources>
+    </acl>
+</config>
